@@ -6,8 +6,7 @@
       <h1>About Personal Expense Tracker</h1>
 
       <p>
-        Personal Expense Tracker is a simple Vue.js application
-        designed to help students keep track of their daily expenses.
+        Personal Expense Tracker is designed to help students keep track of their daily expenses.
       </p>
 
       <p>
@@ -17,9 +16,9 @@
       </p>
 
       <p>
-        Expense records are saved using Local Storage, so the
-        information remains available even after refreshing
-        the browser.
+        Expense records are saved using Local Storage, so para ang 
+        information kay remains available even after refreshing
+        the browser. And bla bla bla.
       </p>
 
       <h2>Features</h2>

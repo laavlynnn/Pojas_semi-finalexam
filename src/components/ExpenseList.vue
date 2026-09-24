@@ -1,3 +1,27 @@
+<script setup>
+import ExpenseItem from './ExpenseItem.vue'
+
+defineProps({
+  expenses: {
+    type: Array,
+    required: true
+  }
+})
+
+const emit = defineEmits([
+  'review',
+  'delete'
+])
+
+function handleReview(id) {
+  emit('review', id)
+}
+
+function handleDelete(id) {
+  emit('delete', id)
+}
+</script>
+
 <template>
   <div class="list-container">
 
@@ -32,26 +56,3 @@
   </div>
 </template>
 
-<script setup>
-import ExpenseItem from './ExpenseItem.vue'
-
-defineProps({
-  expenses: {
-    type: Array,
-    required: true
-  }
-})
-
-const emit = defineEmits([
-  'review',
-  'delete'
-])
-
-function handleReview(id) {
-  emit('review', id)
-}
-
-function handleDelete(id) {
-  emit('delete', id)
-}
-</script>

@@ -3,10 +3,10 @@
 
     <div class="hero">
 
-      <h1>Welcome to Personal Expense Tracker!</h1>
+      <h1>Welcome to my Personal Expense Tracker!</h1>
 
       <p>
-        Keep track of your daily spending in one simple place.
+        Keep track of your dailY spending.
       </p>
 
       <p>

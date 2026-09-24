@@ -1,3 +1,29 @@
+<script setup>
+import { useCurrency } from '../composables/useCurrency'
+
+const props = defineProps({
+  expense: {
+    type: Object,
+    required: true
+  }
+})
+
+const emit = defineEmits([
+  'review',
+  'delete'
+])
+
+const { formatCurrency } = useCurrency()
+
+function markReviewed() {
+  emit('review', props.expense.id)
+}
+
+function deleteExpense() {
+  emit('delete', props.expense.id)
+}
+</script>
+
 <template>
   <div
     class="expense-item"
@@ -59,28 +85,3 @@
   </div>
 </template>
 
-<script setup>
-import { useCurrency } from '../composables/useCurrency'
-
-const props = defineProps({
-  expense: {
-    type: Object,
-    required: true
-  }
-})
-
-const emit = defineEmits([
-  'review',
-  'delete'
-])
-
-const { formatCurrency } = useCurrency()
-
-function markReviewed() {
-  emit('review', props.expense.id)
-}
-
-function deleteExpense() {
-  emit('delete', props.expense.id)
-}
-</script>
